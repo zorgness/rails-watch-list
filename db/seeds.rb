@@ -9,6 +9,7 @@
 #   Character.create(name: 'Luke', movie: movies.first)
 require 'open-uri'
 
+
 Movie.destroy_all
 
 Movie.create(title: 'Wonder Woman 1984',
@@ -24,6 +25,6 @@ response = URI.open('https://tmdb.lewagon.com/movie/top_rated')
 json = JSON.parse(response.read)
 
 json['results'].each do |j|
-  Movie.create(title: j['original_title'], overview: j['overview'], poster_url: j['poster_path'],
+  Movie.create(title: j['original_title'], overview: j['overview'], poster_url: "https://image.tmdb.org/t/p/original#{j['poster_path']}",
                rating: j['vote_average'])
 end
