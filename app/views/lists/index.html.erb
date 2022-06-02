@@ -1,0 +1,22 @@
+
+<div class="banner" style="background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)), url(https://rimage.gnst.jp/livejapan.com/public/article/detail/a/00/00/a0000430/img/basic/a0000430_main.jpg?20170429124716&q=80&rw=750&rh=536);">
+  <div class="container">
+    <h1>Save any kind of Movies</h1>
+  </div>
+</div>
+
+  <h3>My Lists</h3>
+
+<div class="container list-container">
+
+
+
+  <% @lists.each do |list| %>
+    <%= link_to list_path(list) do %>
+      <div class="card-category" style="background-image: linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)), url(<%= list.image_url %>)">
+        <%= list.name %>
+      </div>
+    <% end %>
+  <% end %>
+
+</div>

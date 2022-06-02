@@ -1,0 +1,22 @@
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+  <div class="container-fluid">
+      <%= link_to root_path ,class:"navbar-brand" do%>
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTTRj0RyADJQSDqFuE6Moh5SjE5P2BGJ4G8QC0J06bhzu8k5jEGvBJBJQ2muJCa_RC1HJI&usqp=CAU" />
+      <% end %>
+</a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+      <ul class="navbar-nav me-auto">
+          <li class="nav-item active">
+            <%= link_to 'new list', new_list_path, class:"nav-link"  %>
+          </li>
+          <li class="nav-item">
+            <%= link_to 'new movie', new_movie_path, class:"nav-link" %>
+          </li>
+      </ul>
+    </div>
+  </div>
+</div>
